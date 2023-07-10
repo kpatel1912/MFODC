@@ -23,17 +23,20 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="#">
-      MFODC - MEDI-FAST ONLINE DOCTOR CLINIC
-      </Link> {' '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
 }
+
+// TODO remove, this demo shouldn't need to reset the theme.
+
 const defaultTheme = createTheme();
 
-export default function SignUp() {
+export default function PatientSignUp() {
   const [loading,setLoading] = useState(false)
   const navigate = useNavigate()
   const handleSubmit = async (event) => {
@@ -174,7 +177,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="patientLogin" variant="body2">
+                <Link href="/patientHome/patientLogin" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
