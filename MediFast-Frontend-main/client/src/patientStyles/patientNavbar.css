@@ -35,14 +35,13 @@
 
 .nav-left button{
     border-radius: 30px;
-    background-color: #9fdbff;
+    background-color: #00d4ff;
     font-weight: 500;
-    padding: 0px 30px;
-    margin: 4px 0;
+    padding: 0px 25px;
+    margin: 0 20px;
 }
 .nav-left button:hover{
-    
-    background-color: white;
+    color: #fff;
 }
 .nav-right ul{
     display: flex;
@@ -58,19 +57,14 @@
 .nav-right ul li a{
     text-decoration: none;
     padding: 5px;
-    color: #9fdbff;
+    color: #00d4ff;
     transition: background-color 0.4s ease;
     border-radius: 30px;
 
 }
 
 .nav-right ul li a:hover{
-    background-color: white;
+    
+    background-color: #ffffff;
     border-radius: 30px;
-    color: black;
-}
-
-.swal2-container.swal2-center.swal2-backdrop-show{
-    margin: 2px 15px;
-    background-color: aliceblue;
 }

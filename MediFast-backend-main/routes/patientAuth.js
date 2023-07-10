@@ -26,7 +26,7 @@ router.post("/signup", async (req, res) => {
 	}
 });
 
-router.post("/patientLogin", async (req, res) => {
+router.post("/login", async (req, res) => {
     console.log(req.body);
 	try {
 		const user = await PatientSchema.findOne({ email: req.body.email });
@@ -46,5 +46,15 @@ router.post("/patientLogin", async (req, res) => {
 		res.status(500).send({ message: "Internal Server Error" });
 	}
 });
+
+//Route to Indiviudal Patient Details
+router.get('/getPatientDetails/:userId',async(req,res)=>{
+    try {
+        const response = await PatientSchema.findOne({_id:req.params.userId})
+		return res.status(200).send(response)
+    } catch (error) {
+        return res.status(500).send(error)
+    }
+})
 
 module.exports = router;

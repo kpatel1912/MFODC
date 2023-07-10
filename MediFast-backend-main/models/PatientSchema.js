@@ -21,4 +21,6 @@ patientSchema.methods.generateAuthToken = function () {
 
 const PatientSchema = mongoose.model("patientSchema", patientSchema);
 
+
+
 module.exports =  PatientSchema;
