@@ -8,9 +8,19 @@ connectToMongo()
 app.use(cors())
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
-const patientRoutes = require('./routes/patientAuth')
+const patientAuth = require('./routes/patientAuth')
+const adminRoute = require('./routes/adminRoute')
+const adminAuth = require('./routes/adminAuth')
+const doctorAuth = require('./routes/doctorAuth')
+const patientInfo = require('./routes/patientInfo')
+const bookedDoctor = require('./routes/bookedDoctor')
 
-app.use("/api/patient", patientRoutes);
+app.use("/api/patient", patientAuth);
+app.use("/api/admin", adminRoute);
+app.use("/api/admin/auth", adminAuth);
+app.use("/api/doctor/auth", doctorAuth);
+app.use("/api/patientInfo", patientInfo);
+app.use("/api/bookedDoctor", bookedDoctor);
 
 app.get('/',(req,res)=>{
     res.send('Inside index.js')

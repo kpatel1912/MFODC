@@ -39,7 +39,7 @@ export function Pricing(){
   return (
     <>
      <div className="pricing-container">
-      <h2 className="pricing-title">Pricing And Appointment</h2>
+      <h2 className="pricing-title">Pricing</h2>
       <div className="pricing-cards">
         {pricingData.map((pricing, index) => (
           <div key={index} className="pricing-card">
@@ -80,10 +80,10 @@ export function Appointment(){
     'Dr. Emily Brown',
   ];
   const locations = [
-    'Pune',
-    'Pune Aundh',
-    'Mumbai',
-    'Nashik',
+    'Toronto',
+    'Mississauga',
+    'Brampton',
+    'NorthYork',
   ];
 
   const handleSubmit = (e) => {
@@ -148,10 +148,6 @@ export function Appointment(){
           </Button>
         </Modal.Footer>
       </Modal>
- 
-
-
-
 </>
   );
 };
