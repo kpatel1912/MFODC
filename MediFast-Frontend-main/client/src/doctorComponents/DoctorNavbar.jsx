@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link,useNavigate} from "react-router-dom";
 import '../patientStyles/patientNavbar.css'
-const PatientNavbar = () => {
+const DoctorNavbar = () => {
   const navigate = useNavigate()
   const [logoutBtn,setLogutBtn] = useState(false)
   const token = localStorage.getItem('token')
@@ -13,7 +13,6 @@ const PatientNavbar = () => {
   function handleLogout(){
     localStorage.removeItem('token')
     localStorage.removeItem('id')
-    localStorage.removeItem('userId')
     navigate('/')
     // window.location.href = '/';
   }
@@ -23,13 +22,10 @@ const PatientNavbar = () => {
       <nav className='nav-all'>
         <div className='nav-right'>
           <ul>
-            <li><Link to='/patientHome/features'>Features</Link></li>
-            <li><Link to='/patientHome/pricing-appointment'>Pricing and Appointment</Link></li>
-            <li><Link to='/patientHome/faq'>FAQ</Link></li>
-            <li><Link to='/patientHome/find-clinic'>Find Clinic</Link></li>
-            <li><Link to='/patientHome/contact'>Contact US</Link></li>
-            <li><Link to='/patientHome/doctor-consultant'>Doctor and Consultant</Link></li>
-            <li><Link to='/patientHome/about'>About US</Link></li>
+            <li><Link to='/doctorHome/patientRecord'>Patient Record</Link></li>
+            <li><Link to='/doctorHome/myAppointment'>My Appointment</Link></li>
+            <li><Link to='/doctorHome/prescription'>Prescription</Link></li>
+            <li><Link to='/doctorHome/medicalHistory'>Medical History</Link></li>
           </ul>
         </div>
 
@@ -37,8 +33,7 @@ const PatientNavbar = () => {
           {/* <ul>
             <li><a href='#'>Profile</a></li>
           </ul> */}
-          {logoutBtn && (<button onClick={()=>(navigate('/patientHome/profile'))}>Profile</button>)}
-          {!logoutBtn && (<button onClick={()=>(navigate('/patientHome/patientLogin'))}>Login</button>)}
+          {!logoutBtn && (<button onClick={()=>(navigate('/doctorHome/doctorLogin'))}>Login</button>)}
           {logoutBtn && (<button onClick={handleLogout}>LogOut</button>)}
         </div>
       </nav>
@@ -47,5 +42,5 @@ const PatientNavbar = () => {
   )
 }
 
-export default PatientNavbar
+export default DoctorNavbar
 

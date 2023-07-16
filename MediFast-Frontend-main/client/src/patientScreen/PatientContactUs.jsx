@@ -26,6 +26,11 @@ const PatientContactUs = () => {
             <h4>Email</h4>
             <h5>c0850114@mylambton.ca</h5>
             <a href="mailto:c0850114@mylambton.ca" target='_blank'>Send a message</a>
+            <h5>c0850115@mylambton.ca</h5>
+            <a href="mailto:c0850115@mylambton.ca" target='_blank'>Send a message</a>
+            <h5>c0850064@mylambton.ca</h5>
+            <a href="mailto:C0850064@mylambton.ca" target='_blank'>Send a message</a>
+          
           </article>
 
           {/* <article className="contact__option">
